@@ -1,0 +1,56 @@
+{
+    "name": "Pivot",
+    "version": "0.0.1",
+    "author": "EighteenChild",
+    "namemsg": "skinname-pivot",
+    "descriptionmsg": "skindesc-pivot",
+    "type": "skin",
+    "requires": {
+        "MediaWiki": ">= 1.40.0"
+    },
+    "ValidSkinNames": {
+        "pivot": {
+            "class": "SkinPivot",
+            "args": [
+                {
+                    "name": "pivot",
+                    "responsive": true,
+                    "messages": [
+                        "skinname-pivot",
+                        "skindesc-pivot"
+                    ],
+                    "scripts": [
+                        "skins.pivot"
+                    ],
+                    "styles": [
+                        "skins.pivot"
+                    ]
+                }
+            ]
+        }
+    },
+    "ResourceModules": {
+        "skins.pivot": {
+			"class": "ResourceLoaderSkinModule",
+            "scripts": [
+                "dist/main.js"
+            ],
+            "styles": [
+                "dist/main.css"
+            ]
+        }
+    },
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Pivot"
+	},
+    "AutoloadClasses": {
+        "SkinPivot": "SkinPivot.php"
+    },
+    "MessageDirs": {
+        "SkinPivot": [
+            "i18n"
+        ]
+    },
+    "manifest_version": 2
+}
