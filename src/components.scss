@@ -1,0 +1,158 @@
+
+.mw-body-content {
+    padding-block: 2em;
+    padding-inline: 1em;
+    line-height: 200%;
+}
+
+header.site-header {
+    writing-mode: horizontal-tb;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    background: $header-bg;
+    color: $header-fg;
+    box-shadow: $shadow;
+    img.site-logo {
+        height: 2.8rem;
+        width: 6.6rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav > a {
+        display: block;
+        padding-block: 0.5rem;
+        padding-inline: 0.5rem;
+        color: $header-fg;
+    }
+    nav > a:hover {
+        background: $header-fg;
+        color: $header-bg;
+    }
+}
+
+main.site-main {
+    background: $bg;
+    inline-size: calc(100vh - $nav-height - 2rem);
+    max-inline-size: 40em;
+    margin-block: 2rem;
+    margin-inline-start: $nav-height;
+    margin-inline-end: 2rem;
+    border: $border;
+    border-radius: $radius;
+}
+
+footer.site-footer {
+    background: $accent-bg;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border-block-start: $border;
+    border-end-start-radius: $radius;
+    border-end-end-radius: $radius;
+    img {
+        margin-inline: 0.25rem;
+    }
+}
+
+h1.firstHeading {
+    font-weight: 700;
+}
+
+table.wikitable {
+    border: $border;
+    border-collapse: collapse;
+    tr, th, td {
+        padding-inline: 0.5em;
+        padding-block: 0.25em;
+        border: $border;
+        border-width: 1px;
+    }
+    th {
+        background: $accent-bg;
+    }
+}
+
+span.mw-editsection {
+    font-size: 1rem;
+    margin-inline-start: 0.5rem;
+}
+
+form.mw-editform {
+    writing-mode: horizontal-tb;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        inline-size: 10em;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: $bg;
+        color: $fg;
+        box-shadow: $shadow;
+    }
+}
+
+.dropdown:hover {
+    .dropdown-content {
+        display: block;
+    }
+    a {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+header.page-header {
+    background: $accent-bg;
+    padding-block: 2em;
+    padding-inline: 1em;
+    border-block-end: $border;
+    border-start-start-radius: $radius;
+    border-start-end-radius: $radius;
+}
+
+nav.page-menu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-inline: 1em;
+    margin-block-start: 1em;
+    border-radius: $radius-small;
+    background: $bg;
+    > li {
+        display: block;
+        border-block: $border;
+        color: $fg;
+    }
+    > :first-child {
+        border-inline-start: $border;
+        border-start-start-radius: $radius-small;
+        border-end-start-radius: $radius-small;
+    }
+    > :last-child {
+        border-inline-end: $border;
+        border-start-end-radius: $radius-small;
+        border-end-end-radius: $radius-small;
+    }
+    li:hover {
+        background: $fg;
+        color: $bg;
+    }
+    li a {
+        display: inline-block;
+        padding-block: 1em;
+        padding-inline: 0.5em;
+        color: inherit;
+    }
+}

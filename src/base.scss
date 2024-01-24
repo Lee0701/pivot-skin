@@ -1,0 +1,37 @@
+
+body {
+    writing-mode: vertical-rl;
+    margin: 0;
+    background: $root-bg;
+    font-size: 1.12rem;
+}
+
+body, h1, h2, h3, h4, h5, h6, b {
+    font-family: $sans-font;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+a {
+    color: $link;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: $link-focus;
+    }
+    &.new {
+        color: $redlink;
+    }
+    &.new:hover, &.new:focus {
+        color: $redlink-focus;
+    }
+}
+
+img, table {
+    white-space: break-spaces;
+    line-break: anywhere;
+}
+
+b, strong {
+    font-weight: 700;
+}
