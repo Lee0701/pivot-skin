@@ -81,6 +81,7 @@ footer.site-footer {
 table.wikitable {
     border: $border;
     border-collapse: collapse;
+    background: $bg;
     tr, th, td {
         padding-inline: 0.5em;
         padding-block: 0.25em;
@@ -102,6 +103,16 @@ span.mw-editsection {
 
 .mw-htmlform {
     writing-mode: horizontal-tb;
+}
+
+.mw-prefs-search {
+    writing-mode: horizontal-tb;
+    float: left;
+}
+
+.mw-htmlform-ooui-wrapper {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .mw-editform {
@@ -245,4 +256,8 @@ nav.page-menu {
     li:first-child::before {
         content: initial;
     }
+}
+
+.external.autonumber {
+    display: inline-block;
 }
