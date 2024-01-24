@@ -1,5 +1,10 @@
 {{>header}}
 <div class="main-wrapper">
+    {{#html-site-notice}}
+        <div class="notice">
+            {{{html-site-notice}}}
+        </div>
+    {{/html-site-notice}}
     <main class="site-main">
         {{>page-header}}
         {{{html-body-content}}}

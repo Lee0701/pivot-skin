@@ -41,15 +41,28 @@ div.main-wrapper {
     width: 100vw;
     overflow-x: scroll;
     overflow-y: hidden;
+    > * {
+        margin: 2rem;
+        margin-top: $nav-height;
+        max-height: 45em;
+    }
 }
 
 main.site-main {
     background: $bg;
-    margin: 2rem;
-    margin-top: $nav-height;
-    max-height: 45em;
     border: $border;
     border-radius: $radius;
+}
+
+div.notice {
+    background: #9addff40;
+    padding-block: 0.5em;
+    border: 2px solid #89caec;
+    border-radius: 1em;
+    line-height: 200%;
+    li {
+        list-style-type: none;
+    }
 }
 
 footer.site-footer {
