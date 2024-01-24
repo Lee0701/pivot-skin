@@ -34,6 +34,8 @@ a {
 }
 
 img, table {
+    max-inline-size: 100%;
+    block-size: auto;
     white-space: break-spaces;
     line-break: anywhere;
 }

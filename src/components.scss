@@ -79,6 +79,10 @@ span.mw-editsection {
     margin-inline-start: 0.5rem;
 }
 
+.mw-htmlform {
+    writing-mode: horizontal-tb;
+}
+
 .mw-editform {
     .wikiEditor-ui {
         writing-mode: horizontal-tb;
@@ -187,7 +191,7 @@ nav.page-menu {
     }
     li a {
         display: inline-block;
-        padding-block: 1em;
+        padding-block: 0.75em;
         padding-inline: 0.5em;
         color: inherit;
     }
