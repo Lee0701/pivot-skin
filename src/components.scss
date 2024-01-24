@@ -2,6 +2,7 @@
 .mw-body-content {
     margin-block: 2em;
     padding-inline: 2em;
+    text-orientation: upright;
     line-height: 200%;
 }
 
@@ -94,6 +95,9 @@ table.wikitable {
 span.mw-editsection {
     font-size: 1rem;
     margin-inline-start: 0.5rem;
+    .mw-editsection-bracket {
+        text-orientation: mixed;
+    }
 }
 
 .mw-htmlform {

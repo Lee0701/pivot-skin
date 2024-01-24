@@ -26,6 +26,7 @@ a {
     }
     &.external {
         color: $greenlink;
+        text-orientation: mixed;
     }
     &.external:hover, &.external:focus {
         color: $greenlink-focus;
