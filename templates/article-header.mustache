@@ -1,3 +1,13 @@
 <header class="article-header">
     {{{html-title-heading}}}
+    <nav class="article-menu">
+        {{#data-portlets}}
+            {{#data-views.array-items}}
+                {{{html-item}}}
+            {{/data-views.array-items}}
+            {{#data-actions}}
+                {{>dropdown}}
+            {{/data-actions}}
+        {{/data-portlets}}
+    </nav>
 </header>

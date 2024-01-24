@@ -12,13 +12,17 @@ $fg: #000;
 $accent-bg: #f5f8fa;
 $header-bg: #222;
 $header-fg: #fff;
-$border: #e1e8ed;
+$border-fg: #e1e8ed;
 $radius: 1em;
+$radius-small: 0.5em;
 
 $link: #337ab7;
 $link-focus: #23527c;
 $redlink: #b73333;
 $redlink-focus: #7c2323;
+
+$shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$border: 2px solid $border-fg;
 
 $sans-font: 'Noto Sans KR', 'Noto Sans JP', 'Han-Nom Gothic', sans-serif;
 
@@ -46,7 +50,7 @@ header.site-header {
     text-align: center;
     background: $header-bg;
     color: $header-fg;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: $shadow;
     img.site-logo {
         height: 2.8rem;
         width: 6.6rem;
@@ -75,11 +79,12 @@ main.site-main {
     margin-block: 2rem;
     margin-inline-start: $nav-height;
     margin-inline-end: 2rem;
-    border: 2px solid $border;
+    border: $border;
     border-radius: $radius;
 }
 
 article {
+    padding-block: 1em;
     padding-inline: 2em;
     line-height: 200%;
 }
@@ -87,21 +92,82 @@ article {
 header.article-header {
     background: $accent-bg;
     padding-block: 2em;
-    padding-inline: 2em;
-    border-block-end: 2px solid $border;
+    padding-inline: 1em;
+    border-block-end: $border;
     border-start-start-radius: $radius;
     border-start-end-radius: $radius;
+}
+
+nav.article-menu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-inline: 1em;
+    margin-block-start: 1em;
+    border-radius: $radius-small;
+    background: $bg;
+    > li {
+        display: block;
+        border-block: $border;
+        color: $fg;
+    }
+    > :first-child {
+        border-inline-start: $border;
+        border-start-start-radius: $radius-small;
+        border-end-start-radius: $radius-small;
+    }
+    > :last-child {
+        border-inline-end: $border;
+        border-start-end-radius: $radius-small;
+        border-end-end-radius: $radius-small;
+    }
+    li:hover {
+        background: $fg;
+        color: $bg;
+    }
+    li a {
+        display: inline-block;
+        padding-block: 1em;
+        padding-inline: 0.5em;
+        color: inherit;
+    }
 }
 
 footer.site-footer {
     background: $accent-bg;
     padding-block: 0.5em;
     padding-inline: 1em;
-    border-block-start: 2px solid $border;
+    border-block-start: $border;
     border-end-start-radius: $radius;
     border-end-end-radius: $radius;
     img {
         margin-inline: 0.25rem;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        inline-size: 10em;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: $bg;
+        color: $fg;
+        box-shadow: $shadow;
+    }
+}
+
+.dropdown:hover {
+    .dropdown-content {
+        display: block;
+    }
+    a {
+        display: block;
+        cursor: pointer;
     }
 }
 
@@ -122,9 +188,36 @@ a.new:hover, a.new:focus {
     color: $redlink-focus;
 }
 
+img, table {
+    white-space: break-spaces;
+    line-break: anywhere;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+table.wikitable {
+    border: $border;
+    border-collapse: collapse;
+    tr, th, td {
+        padding-inline: 0.5em;
+        padding-block: 0.25em;
+        border: $border;
+        border-width: 1px;
+    }
+    th {
+        background: $accent-bg;
+    }
+}
+
 span.mw-editsection {
     font-size: 1rem;
     margin-inline-start: 0.5rem;
+}
+
+form.mw-editform {
+    writing-mode: horizontal-tb;
 }
 
 @media screen {
