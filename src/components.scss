@@ -37,13 +37,17 @@ header.site-header {
     }
 }
 
+div.main-wrapper {
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
 main.site-main {
     background: $bg;
-    inline-size: calc(100vh - $nav-height - 2rem);
-    max-inline-size: 45em;
-    margin-block: 2rem;
-    margin-inline-start: $nav-height;
-    margin-inline-end: 2rem;
+    margin: 2rem;
+    margin-top: $nav-height;
+    max-height: 45em;
     border: $border;
     border-radius: $radius;
 }
