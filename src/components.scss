@@ -1,6 +1,6 @@
 
 .mw-body-content {
-    padding-block: 2em;
+    margin-block: 2em;
     padding-inline: 2em;
     line-height: 200%;
 }
@@ -211,5 +211,34 @@ nav.page-menu {
         padding-block: 0.75em;
         padding-inline: 0.5em;
         color: inherit;
+    }
+}
+
+.catlinks {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border: $border;
+    border-width: 2px;
+    margin-inline: 2em;
+    margin-block-start: 2em;
+    padding-inline: 2em;
+    border-radius: $radius-small;
+    ul {
+        display: inline-block;
+        padding: 0;
+        padding-inline-start: 0.5em;
+    }
+    li {
+        display: inline-block;
+        list-style-type: none;
+        margin-inline-end: 0.5em;
+    }
+    li::before {
+        content: '·';
+        margin-inline-end: 0.5em;
+    }
+    li:first-child::before {
+        content: initial;
     }
 }
