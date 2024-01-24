@@ -25,6 +25,12 @@ a {
     &.new:hover, &.new:focus {
         color: $redlink-focus;
     }
+    &.external {
+        color: $greenlink;
+    }
+    &.external:hover, &.external:focus {
+        color: $greenlink-focus;
+    }
 }
 
 img, table {
@@ -33,5 +39,5 @@ img, table {
 }
 
 b, strong {
-    font-weight: 700;
+    font-weight: 600;
 }

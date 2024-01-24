@@ -1,7 +1,7 @@
 
 .mw-body-content {
     padding-block: 2em;
-    padding-inline: 1em;
+    padding-inline: 2em;
     line-height: 200%;
 }
 
@@ -40,7 +40,7 @@ header.site-header {
 main.site-main {
     background: $bg;
     inline-size: calc(100vh - $nav-height - 2rem);
-    max-inline-size: 40em;
+    max-inline-size: 45em;
     margin-block: 2rem;
     margin-inline-start: $nav-height;
     margin-inline-end: 2rem;
@@ -58,10 +58,6 @@ footer.site-footer {
     img {
         margin-inline: 0.25rem;
     }
-}
-
-h1.firstHeading {
-    font-weight: 700;
 }
 
 table.wikitable {
@@ -83,8 +79,37 @@ span.mw-editsection {
     margin-inline-start: 0.5rem;
 }
 
-form.mw-editform {
-    writing-mode: horizontal-tb;
+.mw-editform {
+    .wikiEditor-ui {
+        writing-mode: horizontal-tb;
+        width: auto;
+        block-size: 100%;
+        .wikiEditor-ui-left {
+            float: none;
+        }
+    }
+    #wpTextbox1 {
+        inline-size: 60em;
+    }
+    #wpSummary {
+        inline-size: 100%;
+    }
+    .editCheckboxes {
+        writing-mode: horizontal-tb;
+        margin-left: 1em;
+        > * {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    #editpage-copywarn {
+        line-height: 200%;
+    }
+}
+
+.mw-editform .editOptions {
+    margin-bottom: 0;
 }
 
 .dropdown {
@@ -114,25 +139,36 @@ form.mw-editform {
 }
 
 header.page-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background: $accent-bg;
-    padding-block: 2em;
+    padding-block: 0.5em;
     padding-inline: 1em;
     border-block-end: $border;
     border-start-start-radius: $radius;
     border-start-end-radius: $radius;
+    > * {
+        margin-block: 0.5em;
+    }
+}
+
+h1.firstHeading {
+    display: inline-block;
+    font-weight: 600;
 }
 
 nav.page-menu {
     display: inline-flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     margin-inline: 1em;
-    margin-block-start: 1em;
     border-radius: $radius-small;
-    background: $bg;
     > li {
         display: block;
         border-block: $border;
+        background: $bg;
         color: $fg;
     }
     > :first-child {
