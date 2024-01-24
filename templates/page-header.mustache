@@ -5,9 +5,11 @@
             {{#data-views.array-items}}
                 {{{html-item}}}
             {{/data-views.array-items}}
-            {{#data-actions}}
-                {{>dropdown}}
-            {{/data-actions}}
+            {{^data-actions.is-empty}}
+                {{#data-actions}}
+                    {{>dropdown}}
+                {{/data-actions}}
+            {{/data-actions.is-empty}}
         {{/data-portlets}}
     </nav>
 </header>
