@@ -2,9 +2,14 @@
     {{#data-footer.data-info.array-items}}
         <p>{{{ html }}}</p>
     {{/data-footer.data-info.array-items}}
-    <p>
+    <nav>
         {{#data-footer.data-icons.array-items}}
             {{{ html }}}
         {{/data-footer.data-icons.array-items}}
-    </p>
+        <ul>
+            {{#data-footer.data-places.array-items}}
+                <li>{{{ html }}}</li>
+            {{/data-footer.data-places.array-items}}
+        </ul>
+    </nav>
 </footer>

@@ -7,6 +7,8 @@ class SkinPivot extends SkinMustache {
         unset($data['data-portlets-sidebar']['data-portlets-first']['array-items'][3]);
         unset($data['data-portlets-sidebar']['data-portlets-first']['array-items'][4]);
 
+        unset($data['data-footer']['data-places']['array-items'][3]);
+
         return $data;
     }
 }

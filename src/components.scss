@@ -76,6 +76,18 @@ footer.site-footer {
     img {
         margin-inline: 0.25rem;
     }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    nav > * {
+        margin-inline: 0.25rem;
+    }
+    nav > ul {
+        line-height: 200%;
+    }
 }
 
 table.wikitable {
