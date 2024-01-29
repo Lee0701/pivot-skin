@@ -18,7 +18,9 @@ header.site-header {
     box-shadow: $shadow;
     img.site-logo {
         height: 2.8rem;
-        width: 6.6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        width: auto;
     }
     nav {
         display: flex;
