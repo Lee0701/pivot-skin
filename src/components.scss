@@ -123,9 +123,6 @@ span.mw-editsection {
         width: 90vw;
         max-width: 40em;
     }
-    input[type="checkbox"], input[type="radio"] {
-        width: auto;
-    }
     input[type="submit"] {
         width: 100%;
     }
@@ -154,7 +151,6 @@ span.mw-editsection {
 }
 
 .oo-ui-fieldLayout.oo-ui-fieldLayout-align-inline > .oo-ui-fieldLayout-body > .oo-ui-fieldLayout-field {
-    width: unset;
     height: 1px;
 }
 
@@ -162,6 +158,12 @@ span.mw-editsection {
     tr {
         display: flex;
         flex-direction: column;
+    }
+}
+
+#mw-htmlform-options {
+    input {
+        width: unset;
     }
 }
 
@@ -176,6 +178,7 @@ span.mw-editsection {
     }
     #wpTextbox1 {
         inline-size: 60em;
+        max-inline-size: 90vw;
     }
     #wpSummary {
         inline-size: 100%;
