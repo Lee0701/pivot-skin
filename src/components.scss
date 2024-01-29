@@ -117,6 +117,8 @@ span.mw-editsection {
 
 .mw-htmlform {
     writing-mode: horizontal-tb;
+    width: 90vw;
+    max-width: 42em;
     input, textarea, select {
         width: 90vw;
         max-width: 40em;
@@ -138,9 +140,22 @@ span.mw-editsection {
     float: left;
 }
 
+.movepage-wrapper, .deletepage-wrapper {
+    writing-mode: horizontal-tb;
+}
+
+.oo-ui-defaultOverlay {
+    writing-mode: horizontal-tb;
+}
+
 .mw-htmlform-ooui-wrapper {
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+.oo-ui-fieldLayout.oo-ui-fieldLayout-align-inline > .oo-ui-fieldLayout-body > .oo-ui-fieldLayout-field {
+    width: unset;
+    height: 1px;
 }
 
 #mw-htmlform-source, #mw-htmlform-description {
@@ -193,7 +208,9 @@ ul.gallery > .gallerybox {
     display: inline-block;
     .dropdown-content {
         display: none;
+        z-index: 1001;
         position: absolute;
+        bottom: 0;
         inline-size: 10em;
         margin: 0;
         padding: 0;
