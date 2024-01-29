@@ -2,7 +2,6 @@
 .mw-body-content {
     margin-block: 2em;
     padding-inline: 2em;
-    text-orientation: upright;
     line-height: 200%;
 }
 
@@ -53,6 +52,7 @@ main.site-main {
     background: $bg;
     border: $border;
     border-radius: $radius;
+    overflow-y: scroll;
 }
 
 div.notice {
@@ -115,6 +115,16 @@ span.mw-editsection {
 
 .mw-htmlform {
     writing-mode: horizontal-tb;
+    input, textarea, select {
+        width: 90vw;
+        max-width: 40em;
+    }
+    input[type="checkbox"], input[type="radio"] {
+        width: auto;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
 }
 
 .mw-prefs-search {
@@ -125,6 +135,13 @@ span.mw-editsection {
 .mw-htmlform-ooui-wrapper {
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+#mw-htmlform-source, #mw-htmlform-description {
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .mw-editform {
