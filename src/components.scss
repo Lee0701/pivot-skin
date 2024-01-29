@@ -181,6 +181,11 @@ span.mw-editsection {
     margin-bottom: 0;
 }
 
+ul.gallery > .gallerybox {
+    writing-mode: horizontal-tb;
+    margin: 1em;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
