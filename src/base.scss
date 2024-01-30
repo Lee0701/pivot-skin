@@ -55,7 +55,7 @@ b, strong {
         display: none;
         z-index: 1001;
         position: absolute;
-        bottom: 0;
+        top: 0;
         inline-size: 10em;
         margin: 0;
         padding: 0;
@@ -74,6 +74,14 @@ b, strong {
         padding-inline: 0.5em;
         color: inherit;
     }
+}
+.align-top .dropdown-content {
+    bottom: revert;
+    top: 0;
+}
+.align-bottom .dropdown-content {
+    top: revert;
+    bottom: 0;
 }
 
 .dropdown:hover {

@@ -9,7 +9,8 @@ class SkinPivot extends SkinMustache {
 
         unset($data['data-footer']['data-places']['array-items'][3]);
 
-        $data['data-portlets']['data-personal']['label'] = '<i class="fa-solid fa-user"></i>';
+        $data['data-portlets']['data-actions']['class'] .= ' align-bottom';
+        $data['data-portlets']['data-personal']['label'] = '<i class="fa-solid fa-circle-user"></i>';
 
         return $data;
     }
