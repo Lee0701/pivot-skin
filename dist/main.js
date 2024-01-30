@@ -1,0 +1,1 @@
+(()=>{var e=new Set(["textarea","input"]);function a(n){n.childNodes.forEach((function(n){if(n.nodeType===Node.TEXT_NODE)n.data=n.data.replace(/(\r\n|\n|\r)/g,"");else{var t=n.tagName.toLowerCase();e.has(t)||a(n)}}))}function n(){a(document.body)}window.addEventListener("load",n),n()})();
