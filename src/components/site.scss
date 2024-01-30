@@ -11,14 +11,15 @@ header.site-header {
     left: 0;
     right: 0;
     top: 0;
+
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     background: $header-bg;
     color: $header-fg;
     box-shadow: $shadow;
+
     .header-left {
         flex: 1;
         text-align: left;
@@ -28,6 +29,7 @@ header.site-header {
         text-align: right;
     }
     .header-center {
+        flex: 1;
         text-align: center;
     }
     img.site-logo {
@@ -46,6 +48,7 @@ header.site-header {
         padding-block: 0.5rem;
         padding-inline: 0.5rem;
         color: $header-fg;
+        word-break: keep-all;
     }
     nav > a:hover {
         background: $header-fg;
@@ -53,10 +56,37 @@ header.site-header {
     }
 }
 
+@media screen and (max-width: 40em) {
+    header.site-header {
+        flex-direction: column;
+    }
+}
+
 .search-box {
-    padding-inline-end: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
     #searchInput {
-        width: 16em;
+        width: 12em;
+        border-start-start-radius: $radius-smaller;
+        border-end-start-radius: $radius-smaller;
+    }
+    .searchButton {
+        background: $search-btn;
+        color: $header-fg;
+        padding: 0.5rem;
+        border: none;
+        border-start-end-radius: $radius-smaller;
+        border-end-end-radius: $radius-smaller;
+    }
+    .searchButton:hover {
+        background: $search-btn-focus;
+        cursor: pointer;
+    }
+    .searchButton:active {
+        background: $search-btn-pressed;
     }
 }
 
