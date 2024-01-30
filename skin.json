@@ -36,7 +36,8 @@
                 "dist/main.js"
             ],
             "styles": [
-                "dist/main.css"
+                "dist/main.css",
+                "fontawesome/all.min.css"
             ]
         }
     },
