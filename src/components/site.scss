@@ -1,0 +1,132 @@
+
+.mw-body-content {
+    margin-block: 2em;
+    padding-inline: 2em;
+    line-height: 200%;
+}
+
+header.site-header {
+    writing-mode: horizontal-tb;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $header-bg;
+    color: $header-fg;
+    box-shadow: $shadow;
+    .header-left {
+        flex: 1;
+        text-align: left;
+    }
+    .header-right {
+        flex: 1;
+        text-align: right;
+    }
+    .header-center {
+        text-align: center;
+    }
+    img.site-logo {
+        height: 2.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        width: auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav > a {
+        display: block;
+        padding-block: 0.5rem;
+        padding-inline: 0.5rem;
+        color: $header-fg;
+    }
+    nav > a:hover {
+        background: $header-fg;
+        color: $header-bg;
+    }
+}
+
+.search-box {
+    padding-inline-end: 1rem;
+    #searchInput {
+        width: 16em;
+    }
+}
+
+div.main-wrapper {
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    > * {
+        margin: 2rem;
+        margin-top: $nav-height;
+        max-height: 45em;
+    }
+}
+
+main.site-main {
+    background: $bg;
+    border: $border;
+    border-radius: $radius;
+    overflow-y: scroll;
+}
+
+footer.site-footer {
+    background: $accent-bg;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border-block-start: $border;
+    border-end-start-radius: $radius;
+    border-end-end-radius: $radius;
+    img {
+        margin-inline: 0.25rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    nav > * {
+        margin-inline: 0.25rem;
+    }
+    nav > ul {
+        line-height: 200%;
+    }
+}
+
+.catlinks {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border: $border;
+    border-width: 2px;
+    margin-inline: 2em;
+    margin-block-start: 2em;
+    padding-inline: 2em;
+    border-radius: $radius-small;
+    ul {
+        display: inline-block;
+        padding: 0;
+        padding-inline-start: 0.5em;
+    }
+    li {
+        display: inline-block;
+        list-style-type: none;
+        margin-inline-end: 0.5em;
+    }
+    li::before {
+        content: '·';
+        margin-inline-end: 0.5em;
+    }
+    li:first-child::before {
+        content: initial;
+    }
+}

@@ -28,6 +28,9 @@ a {
         color: $greenlink;
         text-orientation: mixed;
     }
+    &.external.autonumber {
+        display: inline-block;
+    }
     &.external:hover, &.external:focus {
         color: $greenlink-focus;
     }
