@@ -5,7 +5,9 @@
 @include normalize();
 
 @import 'consts.scss';
-@import 'components.scss';
+@import 'site/index.scss';
+@import 'page/index.scss';
+@import 'components/index.scss';
 
 @media screen {
     .printfooter {
