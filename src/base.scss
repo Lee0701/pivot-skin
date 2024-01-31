@@ -47,6 +47,14 @@ b, strong {
     font-weight: 600;
 }
 
+blockquote {
+    border: 2px dashed #8884;
+    border-inline-start: 5px solid #222;
+    padding: 10px;
+    background: #8881;
+    text-indent: 0px;
+}
+
 .dropdown {
     writing-mode: vertical-rl;
     position: relative;
