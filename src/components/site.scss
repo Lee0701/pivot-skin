@@ -55,12 +55,6 @@ header.site-header {
     }
 }
 
-@media screen and (max-width: 40em) {
-    header.site-header {
-        flex-direction: column;
-    }
-}
-
 .user-menu {
     display: flex;
     flex-direction: row;
@@ -173,5 +167,14 @@ footer.site-footer {
     }
     li:first-child::before {
         content: initial;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    header.site-header {
+        flex-direction: column;
+    }
+    div.main-wrapper > * {
+        margin-top: $nav-height-collapsed;
     }
 }
