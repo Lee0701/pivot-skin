@@ -59,16 +59,24 @@ header.site-header {
     header.site-header {
         flex-direction: column;
     }
+    .user-menu > a.icon {
+        display: none;
+    }
 }
 
 .user-menu {
-    margin-inline: 0.5rem;
-    line-height: 0%;
-}
-
-.user-menu .dropdown-label {
-    color: $bg;
-    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+    a {
+        color: $bg;
+    }
+    .dropdown-label, .icon {
+        writing-mode: horizontal-tb;
+        padding-inline: 0.5rem;
+        color: $bg;
+        font-size: 1.6rem;
+        height: 1em;
+    }
 }
 
 .search-box {

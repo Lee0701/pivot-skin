@@ -1,4 +1,7 @@
 <div class="user-menu">
+    {{#data-portlets.data-notifications.array-items}}
+        <a class="icon" href="{{ href }}">{{{ label }}}</a>
+    {{/data-portlets.data-notifications.array-items}}
     {{#data-portlets.data-personal}}
         {{>dropdown}}
     {{/data-portlets.data-personal}}

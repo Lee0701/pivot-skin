@@ -11,6 +11,20 @@ class SkinPivot extends SkinMustache {
 
         $data['data-portlets']['data-actions']['class'] .= ' align-bottom';
         $data['data-portlets']['data-personal']['label'] = '<i class="fa-solid fa-circle-user"></i>';
+        if($data['data-portlets']['data-personal']['array-items'][0]['name'] == 'anonuserpage') {
+            $html = $data['data-portlets']['data-personal']['array-items'][0]['html'];
+            $data['data-portlets']['data-personal']['array-items'][0]['html'] = "<a>$html</a>";
+        }
+
+        $notification_alert = $data['data-portlets']['data-personal']['array-items'][1];
+        $notification_notice = $data['data-portlets']['data-personal']['array-items'][2];
+        $notification_alert['label'] = '<i class="fa-solid fa-bell"></i>';
+        $notification_notice['label'] = '<i class="fa-solid fa-envelope-open-text"></i>';
+        $notification_alert['href'] = $notification_alert['array-links'][0]['array-attributes'][1]['value'];
+        $notification_notice['href'] = $notification_notice['array-links'][0]['array-attributes'][1]['value'];
+        $data['data-portlets']['data-notifications'] = [];
+        $data['data-portlets']['data-notifications']['array-items'] = [$notification_alert, $notification_notice];
+        array_splice($data['data-portlets']['data-personal']['array-items'], 1, 2);
 
         return $data;
     }

@@ -64,15 +64,15 @@ b, strong {
         color: $fg;
         box-shadow: $shadow;
     }
-    li:hover {
-        background: $fg;
-        color: $bg;
-    }
-    li a {
+    .dropdown-content > a {
         display: inline-block;
         padding-block: 0.75em;
         padding-inline: 0.5em;
         color: inherit;
+    }
+    .dropdown-content > a:hover {
+        background: $fg;
+        color: $bg;
     }
 }
 .align-top .dropdown-content {
