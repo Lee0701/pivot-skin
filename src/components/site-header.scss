@@ -1,0 +1,68 @@
+
+header.site-header {
+    writing-mode: horizontal-tb;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: $header-bg;
+    color: $header-fg;
+    box-shadow: $shadow;
+
+    .header-left, .header-center, .header-right {
+        flex: 1;
+    }
+    .header-center {
+        text-align: center;
+    }
+    .header-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    img.site-logo {
+        height: 2.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        width: auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav > a {
+        display: block;
+        padding-block: 0.5rem;
+        padding-inline: 0.5rem;
+        color: $header-fg;
+        word-break: keep-all;
+    }
+    nav > a:hover {
+        background: $header-fg;
+        color: $header-bg;
+    }
+}
+
+header.site-header .user-menu {
+    display: flex;
+    flex-direction: row;
+    .dropdown-label, .icon {
+        writing-mode: horizontal-tb;
+        padding-inline: 0.5rem;
+        color: $bg;
+        font-size: 1.6rem;
+        height: 1em;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    header.site-header {
+        flex-direction: column;
+    }
+}

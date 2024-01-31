@@ -1,0 +1,24 @@
+
+footer.site-footer {
+    background: $accent-bg;
+    padding-block: 0.5em;
+    padding-inline: 1em;
+    border-block-start: $border;
+    border-end-start-radius: $radius;
+    border-end-end-radius: $radius;
+    img {
+        margin-inline: 0.25rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    nav > * {
+        margin-inline: 0.25rem;
+    }
+    nav > ul {
+        line-height: 200%;
+    }
+}

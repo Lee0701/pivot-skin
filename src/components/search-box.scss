@@ -1,0 +1,29 @@
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    #searchInput {
+        width: 12em;
+        padding-inline-start: 1em;
+        border-start-start-radius: $radius-smaller;
+        border-end-start-radius: $radius-smaller;
+    }
+    .searchButton {
+        background: $search-btn;
+        color: $header-fg;
+        padding: 0.5rem;
+        border: none;
+        border-start-end-radius: $radius-smaller;
+        border-end-end-radius: $radius-smaller;
+    }
+    .searchButton:hover {
+        background: $search-btn-focus;
+        cursor: pointer;
+    }
+    .searchButton:active {
+        background: $search-btn-pressed;
+    }
+}

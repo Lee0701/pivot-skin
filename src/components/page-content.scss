@@ -55,49 +55,59 @@ blockquote {
     text-indent: 0px;
 }
 
-.dropdown {
-    writing-mode: vertical-rl;
-    position: relative;
-    display: inline-block;
-    .dropdown-content {
-        display: none;
-        z-index: 1001;
-        position: absolute;
-        top: 0;
-        inline-size: 10em;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        background: $bg;
-        color: $fg;
-        box-shadow: $shadow;
-    }
-    .dropdown-content > a {
-        display: inline-block;
-        padding-block: 0.75em;
+table.wikitable {
+    border: $border;
+    border-collapse: collapse;
+    background: $bg;
+    tr, th, td {
         padding-inline: 0.5em;
-        color: inherit;
+        padding-block: 0.25em;
+        border: $border;
+        border-width: 1px;
     }
-    .dropdown-content > a:hover {
-        background: $fg;
-        color: $bg;
+    th {
+        background: $accent-bg;
     }
-}
-.align-top .dropdown-content {
-    bottom: revert;
-    top: 0;
-}
-.align-bottom .dropdown-content {
-    top: revert;
-    bottom: 0;
 }
 
-.dropdown:hover {
-    .dropdown-content {
-        display: block;
+.catlinks {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border: $border;
+    border-width: 2px;
+    margin-inline: 2em;
+    margin-block-start: 2em;
+    padding-inline: 2em;
+    border-radius: $radius-small;
+    ul {
+        display: inline-block;
+        padding: 0;
+        padding-inline-start: 0.5em;
     }
-    a {
-        display: block;
-        cursor: pointer;
+    li {
+        display: inline-block;
+        list-style-type: none;
+        margin-inline-end: 0.5em;
     }
+    li::before {
+        content: '·';
+        margin-inline-end: 0.5em;
+    }
+    li:first-child::before {
+        content: initial;
+    }
+}
+
+span.mw-editsection {
+    font-size: 1rem;
+    margin-inline-start: 0.5rem;
+    .mw-editsection-bracket {
+        text-orientation: mixed;
+    }
+}
+
+ul.gallery > .gallerybox {
+    writing-mode: horizontal-tb;
+    margin: 1em;
 }

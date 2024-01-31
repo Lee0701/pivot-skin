@@ -1,0 +1,30 @@
+
+.mw-body-content {
+    margin-block: 2em;
+    padding-inline: 2em;
+    line-height: 200%;
+}
+
+div.main-wrapper {
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    > * {
+        margin: 2rem;
+        margin-top: $nav-height;
+        max-height: 45em;
+    }
+}
+
+main.site-main {
+    background: $bg;
+    border: $border;
+    border-radius: $radius;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 40em) {
+    div.main-wrapper > * {
+        margin-top: $nav-height-collapsed;
+    }
+}

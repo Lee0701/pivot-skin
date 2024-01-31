@@ -1,0 +1,47 @@
+
+.dropdown {
+    writing-mode: vertical-rl;
+    position: relative;
+    display: inline-block;
+    .dropdown-content {
+        display: none;
+        z-index: 1001;
+        position: absolute;
+        top: 0;
+        inline-size: 10em;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: $bg;
+        color: $fg;
+        box-shadow: $shadow;
+    }
+    .dropdown-content > a {
+        display: inline-block;
+        padding-block: 0.75em;
+        padding-inline: 0.5em;
+        color: $fg;
+    }
+    .dropdown-content > a:hover {
+        background: $fg;
+        color: $bg;
+    }
+}
+.align-top .dropdown-content {
+    bottom: revert;
+    top: 0;
+}
+.align-bottom .dropdown-content {
+    top: revert;
+    bottom: 0;
+}
+
+.dropdown:hover {
+    .dropdown-content {
+        display: block;
+    }
+    a {
+        display: block;
+        cursor: pointer;
+    }
+}

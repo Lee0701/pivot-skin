@@ -4,9 +4,7 @@
 @import 'normalize-scss';
 @include normalize();
 
-
 @import 'consts.scss';
-@import 'base.scss';
 @import 'components.scss';
 
 @media screen {
