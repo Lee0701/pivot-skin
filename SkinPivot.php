@@ -17,13 +17,10 @@ class SkinPivot extends SkinMustache {
         }
 
         $notification_alert = $data['data-portlets']['data-personal']['array-items'][1];
-        $notification_notice = $data['data-portlets']['data-personal']['array-items'][2];
         $notification_alert['label'] = '<i class="fa-solid fa-bell"></i>';
-        $notification_notice['label'] = '<i class="fa-solid fa-envelope-open-text"></i>';
         $notification_alert['href'] = $notification_alert['array-links'][0]['array-attributes'][1]['value'];
-        $notification_notice['href'] = $notification_notice['array-links'][0]['array-attributes'][1]['value'];
         $data['data-portlets']['data-notifications'] = [];
-        $data['data-portlets']['data-notifications']['array-items'] = [$notification_alert, $notification_notice];
+        $data['data-portlets']['data-notifications']['array-items'][] = $notification_alert;
         array_splice($data['data-portlets']['data-personal']['array-items'], 1, 2);
 
         return $data;

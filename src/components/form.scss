@@ -1,5 +1,5 @@
 
-.mw-htmlform {
+.mw-htmlform, .mw-rcfilters-head, .movepage-wrapper, .deletepage-wrapper {
     writing-mode: horizontal-tb;
     width: 90vw;
     max-width: 42em;
@@ -19,18 +19,6 @@
 .mw-prefs-search {
     writing-mode: horizontal-tb;
     float: left;
-}
-
-.movepage-wrapper, .deletepage-wrapper {
-    writing-mode: horizontal-tb;
-}
-
-.oo-ui-defaultOverlay {
-    writing-mode: horizontal-tb;
-}
-
-.mw-echo-ui-notificationsInboxWidget {
-    writing-mode: horizontal-tb;
 }
 
 .mw-htmlform-ooui-wrapper {

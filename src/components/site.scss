@@ -59,9 +59,6 @@ header.site-header {
     header.site-header {
         flex-direction: column;
     }
-    .user-menu > a.icon {
-        display: none;
-    }
 }
 
 .user-menu {
@@ -84,9 +81,10 @@ header.site-header {
     flex-direction: row;
     justify-content: center;
     padding-block: 0.5rem;
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
     #searchInput {
         width: 12em;
+        padding-inline-start: 1em;
         border-start-start-radius: $radius-smaller;
         border-end-start-radius: $radius-smaller;
     }
