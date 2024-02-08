@@ -60,8 +60,8 @@ header.site-header {
         right: $nav-icon-size;
     }
 
-    .dropdown {
-        padding-inline: 1rem;
+    .dropdown, .icon {
+        padding-inline: 0.5rem;
     }
 
     .dropdown-label, .icon {

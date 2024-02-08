@@ -24,6 +24,7 @@ class SkinPivot extends SkinMustache {
             $data['data-portlets']['data-personal']['array-items'][0]['html'] = "<a>$html</a>";
             $data['data-portlets']['data-personal']['label'] = '<i class="fa-regular fa-circle-user"></i>';
         }
+        $data['data-portlets']['data-languages']['label'] = '<i class="fa-solid fa-language"></i>';
 
         $notification_alert = $data['data-portlets']['data-personal']['array-items'][1];
         $notification_alert['label'] = '<i class="fa-solid fa-bell"></i>';
