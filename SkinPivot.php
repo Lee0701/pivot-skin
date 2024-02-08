@@ -14,6 +14,7 @@ class SkinPivot extends SkinMustache {
         if($data['data-portlets']['data-personal']['array-items'][0]['name'] == 'anonuserpage') {
             $html = $data['data-portlets']['data-personal']['array-items'][0]['html'];
             $data['data-portlets']['data-personal']['array-items'][0]['html'] = "<a>$html</a>";
+            $data['data-portlets']['data-personal']['label'] = '<i class="fa-regular fa-circle-user"></i>';
         }
 
         $notification_alert = $data['data-portlets']['data-personal']['array-items'][1];
