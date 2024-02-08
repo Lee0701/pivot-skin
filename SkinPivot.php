@@ -7,9 +7,17 @@ class SkinPivot extends SkinMustache {
         unset($data['data-portlets-sidebar']['data-portlets-first']['array-items'][3]);
         unset($data['data-portlets-sidebar']['data-portlets-first']['array-items'][4]);
 
+        if(isset($data['data-portlets-sidebar']['array-portlets-rest'][0]['array-items'][2])) {
+            $specialpages = $data['data-portlets-sidebar']['array-portlets-rest'][0]['array-items'][2];
+            unset($data['data-portlets-sidebar']['array-portlets-rest'][0]['array-items'][2]);
+            $data['data-portlets-sidebar']['data-portlets-first']['array-items'][3] = $specialpages;
+        }
+        $data['data-portlets-sidebar']['data-portlets-first']['label'] = '<i class="fa-solid fa-compass"></i>';
+
         unset($data['data-footer']['data-places']['array-items'][3]);
 
         $data['data-portlets']['data-actions']['class'] .= ' align-bottom';
+        $data['data-portlets']['data-personal']['class'] .= ' align-top align-right';
         $data['data-portlets']['data-personal']['label'] = '<i class="fa-solid fa-circle-user"></i>';
         if($data['data-portlets']['data-personal']['array-items'][0]['name'] == 'anonuserpage') {
             $html = $data['data-portlets']['data-personal']['array-items'][0]['html'];

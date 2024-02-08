@@ -1,13 +1,12 @@
 
 .dropdown {
-    writing-mode: vertical-rl;
     position: relative;
     display: inline-block;
+
     .dropdown-content {
         display: none;
         z-index: 1001;
         position: absolute;
-        top: 0;
         inline-size: 10em;
         margin: 0;
         padding: 0;
@@ -26,14 +25,6 @@
         background: $fg;
         color: $bg;
     }
-}
-.align-top .dropdown-content {
-    bottom: revert;
-    top: 0;
-}
-.align-bottom .dropdown-content {
-    top: revert;
-    bottom: 0;
 }
 
 .dropdown:hover {

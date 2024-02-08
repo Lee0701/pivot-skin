@@ -10,20 +10,19 @@ header.site-header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-block-end: 0.5rem;
+
     background: $header-bg;
     color: $header-fg;
     box-shadow: $shadow;
 
     .header-left, .header-center, .header-right {
-        flex: 1;
-    }
-    .header-center {
-        text-align: center;
-    }
-    .header-right {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        flex: 1;
     }
     img.site-logo {
         height: 2.8rem;
@@ -47,17 +46,32 @@ header.site-header {
         background: $header-fg;
         color: $header-bg;
     }
-}
 
-header.site-header .user-menu {
-    display: flex;
-    flex-direction: row;
+    .align-top .dropdown-content {
+        top: $nav-icon-size;
+    }
+    .align-bottom .dropdown-content {
+        bottom: $nav-icon-size;
+    }
+    .align-left .dropdown-content {
+        left: $nav-icon-size;
+    }
+    .align-right .dropdown-content {
+        right: $nav-icon-size;
+    }
+
+    .dropdown {
+        padding-inline: 1rem;
+    }
+
     .dropdown-label, .icon {
-        writing-mode: horizontal-tb;
-        padding-inline: 0.5rem;
         color: $bg;
-        font-size: 1.6rem;
-        height: 1em;
+        font-size: $nav-icon-size;
+    }
+
+    .user-menu, .site-nav {
+        display: flex;
+        flex-direction: row;
     }
 }
 
